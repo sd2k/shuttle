@@ -1,0 +1,29 @@
+{
+    "type": "array",
+    "length": 1440,
+    "content": {
+        "type": "object",
+        "id": {
+            "type": "string",
+            "uuid": {}
+        },
+        "device_id": "@devices.content.id",
+        "timestamp": {
+            "type": "series",
+            "format" : "%Y-%m-%dT%H:%M:%S",
+            "incrementing": {
+                "start" : "2022-04-06T00:00:00",
+                "increment" : "1m"
+            }
+        },
+        "power": {
+            "type": "number",
+            "subtype": "f64",
+            "range": {
+                "low": 0.0,
+                "high": 3.0,
+                "step": 0.01
+            }
+        }
+    }
+}

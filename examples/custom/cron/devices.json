@@ -1,0 +1,23 @@
+{
+    "type": "array",
+    "length": 5,
+    "content": {
+        "type": "object",
+        "id": {
+            "type": "string",
+            "uuid": {}
+        },
+        "name": {
+            "type": "string",
+            "faker": {
+                "generator": "bs_noun"
+            }
+        },
+        "ipv6": {
+            "type": "string",
+            "faker": {
+                "generator": "ipv6"
+            }
+        }
+    }
+}

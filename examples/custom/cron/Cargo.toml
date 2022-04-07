@@ -3,13 +3,21 @@ name = "cron"
 version = "0.1.0"
 edition = "2021"
 
-[lib]
-crate-type = ["cdylib"]
+# [lib]
+# crate-type = ["cdylib"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-chrono = "0.4"
+anyhow = "1.0"
+aws-config = "0.9"
+aws-sdk-s3 = "0.9"
+bytes = "1.1"
+chrono = { version = "0.4", features = ["serde"] }
+csv = "1.1"
+http = "0.2"
 saffron = "0.1"
-shuttle-service = "0.2"
-tokio = { version = "1.0", features = ["time"] }
+serde = { version = "1.0", features = ["derive"] }
+shuttle-service = { version = "0.2", feature = ["sqlx-postgres"] }
+sqlx = { version = "0.5", features = ["runtime-tokio-native-tls", "postgres", "chrono"] }
+tokio = { version = "1.0", features = ["time", "rt", "macros"] }
